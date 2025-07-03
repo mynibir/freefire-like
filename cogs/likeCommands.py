@@ -96,7 +96,7 @@ class LikeCommands(commands.Cog):
             return
 
         user_id = ctx.author.id
-        cooldown = 30
+        cooldown = 10
         if user_id in self.cooldowns:
             last_used = self.cooldowns[user_id]
             remaining = cooldown - (datetime.now() - last_used).seconds
